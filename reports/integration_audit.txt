@@ -1,0 +1,23 @@
+SMS SHIELD – INITIAL INTEGRATION AUDIT
+
+Supplied files:
+- sms-spam-detection-varnika-main.zip: FastAPI backend, Streamlit frontend, scripts, original/cleaned/train/test data.
+- sms_spam_svm_model.zip: LinearSVC model.
+- tfidf_vectorizer.zip: TfidfVectorizer.
+
+Findings:
+- Original supplied dataset: 5,572 rows (ham 4,825; spam 747); assignment guide says 5,574.
+- Exact duplicate rows in original dataset: 403 duplicate occurrences; cleaned CSV has 5,157 rows.
+- Cleaned dataset: ham 4,515; spam 642; no missing values; no duplicates.
+- Supplied split: train 4,125; test 1,032; exact message overlap 0.
+- Supplied SVM expects 7,329 features; supplied vectorizer produces 7,329 features.
+- Supplied SVM/vectorizer artifacts were serialized with scikit-learn 1.9.1; inspection runtime was 1.8.0, so warnings were emitted.
+- Existing FastAPI backend expects backend/model/sms_spam_model.joblib, which was not present in the uploaded repository.
+- No Logistic Regression artifact was supplied.
+- Existing Streamlit frontend only supports one API prediction and does not include the required charts or error analysis.
+
+Action taken in integrated version:
+- Preserve supplied SVM and vectorizer under provided_artifacts/.
+- Retrain Naive Bayes, Logistic Regression and Linear SVM as separate TF-IDF pipelines on the supplied train.csv.
+- Evaluate all three on the supplied test.csv.
+- Provide a unified Streamlit dashboard and generated evaluation/error-analysis reports.

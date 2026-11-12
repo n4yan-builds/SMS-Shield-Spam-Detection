@@ -1,0 +1,70 @@
+{
+  "Naive Bayes": {
+    "accuracy": 0.9631782945736435,
+    "ham_precision": 0.9596602972399151,
+    "ham_recall": 1.0,
+    "ham_f1": 0.9794149512459371,
+    "spam_precision": 1.0,
+    "spam_recall": 0.703125,
+    "spam_f1": 0.8256880733944955,
+    "support_ham": 904,
+    "support_spam": 128,
+    "confusion_matrix": [
+      [
+        904,
+        0
+      ],
+      [
+        38,
+        90
+      ]
+    ],
+    "misclassified": 38
+  },
+  "Logistic Regression": {
+    "accuracy": 0.9593023255813954,
+    "ham_precision": 0.9565677966101694,
+    "ham_recall": 0.9988938053097345,
+    "ham_f1": 0.9772727272727273,
+    "spam_precision": 0.9886363636363636,
+    "spam_recall": 0.6796875,
+    "spam_f1": 0.8055555555555556,
+    "support_ham": 904,
+    "support_spam": 128,
+    "confusion_matrix": [
+      [
+        903,
+        1
+      ],
+      [
+        41,
+        87
+      ]
+    ],
+    "misclassified": 42
+  },
+  "Linear SVM": {
+    "accuracy": 0.9844961240310077,
+    "ham_precision": 0.9847161572052402,
+    "ham_recall": 0.9977876106194691,
+    "ham_f1": 0.9912087912087912,
+    "spam_precision": 0.9827586206896551,
+    "spam_recall": 0.890625,
+    "spam_f1": 0.9344262295081968,
+    "support_ham": 904,
+    "support_spam": 128,
+    "confusion_matrix": [
+      [
+        902,
+        2
+      ],
+      [
+        14,
+        114
+      ]
+    ],
+    "misclassified": 16
+  }
+}
+
+Saved models in /mnt/data/SMS_Shield_Integrated/models and reports in /mnt/data/SMS_Shield_Integrated/reports

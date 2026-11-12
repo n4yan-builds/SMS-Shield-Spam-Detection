@@ -1,0 +1,16 @@
+{
+  "original_records_in_uploaded_dataset": 5572,
+  "cleaned_records": 5157,
+  "train_records": 4125,
+  "test_records": 1032,
+  "train_test_message_overlap": 0,
+  "train_label_counts": {
+    "ham": 3611,
+    "spam": 514
+  },
+  "test_label_counts": {
+    "ham": 904,
+    "spam": 128
+  },
+  "sklearn_version": "1.8.0"
+}
